@@ -1,0 +1,87 @@
+---
+title: "Coach and Athlete Roles in Player Forged"
+sidebarTitle: "Roles"
+description: "Understand the difference between the Coach and Athlete roles — what each one can see, do, and manage — and why roles are a UI switch, not a security boundary."
+---
+
+Player Forged has two roles: **Coach** and **Athlete**. Your role determines which tab you land on when you sign in, which tools are surfaced in the navigation, and how content is presented to you. Roles are not security gates — they're a convenience layer that keeps the interface focused on what you actually need.
+
+<Note>
+  Because roles are not enforced by a server or account system, any user can sign in as either role at any time. The distinction exists to reduce clutter and give each persona a tailored experience, not to restrict access to sensitive data.
+</Note>
+
+## The Two Roles at a Glance
+
+<CardGroup cols={2}>
+  <Card title="Coach" icon="whistle">
+    Lands on the **Team** tab. Manages the roster, creates and assigns training programs, views every athlete's progress, and controls the calendar from a planning perspective.
+  </Card>
+  <Card title="Athlete" icon="baseball">
+    Lands on the **Training** tab. Sees their own assigned workouts and drills, completes daily checklists, marks assignments done, and can export their personal progress file.
+  </Card>
+</CardGroup>
+
+## Coach Role
+
+When you sign in as a Coach, the app puts team management front and center.
+
+<Steps>
+  <Step title="Team Tab — your home base">
+    The **Team** tab loads first. Here you can view the full roster, add or remove athletes, and see a summary of each player's recent activity. Tap any athlete's name to drill into their individual training history.
+  </Step>
+
+  <Step title="Assigning training">
+    From the Team tab you can assign specific training programs, drill sets, or rest days to individual athletes or the whole roster at once. Assigned workouts appear automatically in each athlete's Training tab the next time they sign in.
+  </Step>
+
+  <Step title="Coach view in the Practice Calendar">
+    The **Practice Calendar** has a dedicated Coach view that shows the entire team's schedule side-by-side. You can plan team practices, mark days as rest or off-season, and see at a glance which athletes have completed their assigned work for any given day.
+  </Step>
+
+  <Step title="Adding custom drills">
+    Coaches can create custom drills from scratch — name, description, rep scheme, cues, and any video clips you want to attach. Custom drills are added to the drill library and can be included in any training program you build.
+  </Step>
+
+  <Step title="Exporting athlete files">
+    From the Team tab, coaches can export a per-athlete JSON file for any player on the roster. Send that file to the athlete so they can import it at sign-in on their own device. See [Data & Privacy](/getting-started/data-and-privacy) for details.
+  </Step>
+</Steps>
+
+## Athlete Role
+
+When you sign in as an Athlete, the app focuses entirely on your personal training.
+
+<Steps>
+  <Step title="Training Tab — your home base">
+    The **Training** tab loads first and shows your current assignments. Coach-assigned workouts appear here automatically once you've imported your training file or your coach has pushed updates to the shared device.
+  </Step>
+
+  <Step title="Completing checklists">
+    Each workout includes a checklist of drills or exercises. Tap the checkbox next to each item as you complete it. Your progress is saved locally in real time — if you close the browser mid-workout, your completed items are still checked when you return.
+  </Step>
+
+  <Step title="Marking assignments done">
+    When every checklist item is ticked, you can mark the entire assignment as **Done**. This updates your completion record, which your coach can see if you're both on the same device or if you export and share your progress file.
+  </Step>
+
+  <Step title="Exporting your progress file">
+    At any time you can export your personal data as a JSON file. Share it with your coach or import it on another device to keep your progress synced. See [Data & Privacy](/getting-started/data-and-privacy) for what's included in the export.
+  </Step>
+</Steps>
+
+## Switching Roles
+
+You're never locked into the role you chose at sign-in. Use the **Switch User** link to return to the sign-in screen and choose a different role — or hand the device to a teammate who needs a different view.
+
+<Tabs>
+  <Tab title="Coach switching to Athlete view">
+    Sign in with your own name and select **Athlete**. You'll see exactly what your athletes see — useful for testing an assignment you just built or checking that a program looks right before pushing it to the team.
+  </Tab>
+  <Tab title="Athlete switching to Coach view">
+    Sign in as Coach to access the full drill library, calendar planning tools, and roster management. Remember: this is a UI convenience, not an elevated permission. All data on the device remains accessible regardless of role.
+  </Tab>
+</Tabs>
+
+<Warning>
+  If you manage both coaching duties and your own training (common for player-coaches), consider signing in as **Coach** by default and using the **Training As** selector in the Training tab to view your personal assignments without fully switching roles. See [Navigation](/getting-started/navigation) for how that selector works.
+</Warning>

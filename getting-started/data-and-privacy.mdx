@@ -1,0 +1,127 @@
+---
+title: "Data Storage and Privacy in Player Forged"
+sidebarTitle: "Data & Privacy"
+description: "Learn how Player Forged stores all data locally in your browser, what Export and Import do, how per-athlete files work, and why nothing ever leaves your device."
+---
+
+Player Forged is a fully local application. Every piece of data you create — rosters, training programs, completed checklists, drill libraries, calendar entries, recovery notes, and any video clips you upload for review — lives exclusively in your browser's `localStorage` on the device you're using right now. Nothing is transmitted to a server. There are no accounts, no cloud sync, and no third-party analytics collecting your information.
+
+<Note>
+  Because data lives on your device, **it is not automatically shared between devices**. If you train on a phone at the field and review footage on a laptop at home, you'll need to export from one device and import on the other. The Export and Import tools in the data bar make this straightforward.
+</Note>
+
+## How localStorage Works
+
+`localStorage` is a storage area built into every modern web browser. It persists across page reloads and browser restarts, but it is:
+
+- **Device-specific** — data on your phone is not on your tablet.
+- **Browser-specific** — data in Chrome is not in Safari on the same machine.
+- **Origin-specific** — only Player Forged running at its exact URL can read or write this data; no other website can access it.
+
+<Warning>
+  Clearing your browser's site data, cookies, or cache can permanently delete your Player Forged data. Before doing any browser cleanup, always export a backup first using the **Export** button in the data bar.
+</Warning>
+
+### If localStorage Is Unavailable
+
+Some browsers, browser extensions, or privacy modes (such as Safari's private browsing) block `localStorage` access. If Player Forged detects that `localStorage` is unavailable when it loads, it displays a warning banner explaining that data cannot be saved in the current environment.
+
+<Warning>
+  In a browser or mode where `localStorage` is blocked, your session will still function for the duration of the page visit, but **nothing will be saved** when you close the tab. Switch to a standard (non-private) browser window to use Player Forged with persistent storage.
+</Warning>
+
+---
+
+## Exporting Data
+
+The **Export** button in the data bar creates a `.json` file and downloads it to your device. This file is a complete snapshot of everything currently stored in `localStorage` for the app.
+
+**What's included in a full export:**
+- The complete roster with all athlete profiles
+- All training programs, drill libraries, and custom drills
+- Every calendar entry, scheduled practice, rest day, and off-season block
+- Completed checklist history for all athletes
+- Recovery notes and readiness logs
+- Coach-created assignment records
+
+<Tip>
+  Export regularly and store the backup file somewhere safe — your device's local drive, a USB drive, or an email to yourself. Treat it like saving a document: it's your only safeguard against accidental data loss.
+</Tip>
+
+### Per-Athlete Export
+
+In addition to the full export, coaches can export a file containing **only one athlete's data** from the Team tab. Tap the export icon next to any athlete's name and you'll get a JSON file scoped to that individual.
+
+This is the recommended way to share training data with an athlete who uses Player Forged on their own device:
+
+<Steps>
+  <Step title="Coach exports the athlete file">
+    In the Team tab, find the athlete's name in the roster list and tap the export icon. A `.json` file is downloaded containing only that athlete's assignments, history, and profile.
+  </Step>
+  <Step title="Coach sends the file to the athlete">
+    Share the file however is convenient — email, messaging app, AirDrop, shared folder. It's just a text file; any method works.
+  </Step>
+  <Step title="Athlete imports at sign-in (or from the data bar)">
+    The athlete opens Player Forged on their device, reaches the sign-in screen, and taps **Import Training File** before signing in. Alternatively, they can sign in first and use the **Import** button in the data bar. Either way, the data merges into their local storage.
+  </Step>
+</Steps>
+
+<Note>
+  Importing a per-athlete file only adds or updates **that athlete's records**. It does not overwrite roster entries for other athletes, delete existing custom drills, or affect anyone else's history. Each athlete's data is keyed by their roster identity, so imports are safely isolated.
+</Note>
+
+---
+
+## Importing Data
+
+The **Import** button in the data bar (and the import option on the sign-in screen) lets you load a previously exported `.json` file back into the app.
+
+### Merge vs. Replace
+
+When you import a file, Player Forged performs a **smart merge**:
+
+<CardGroup cols={2}>
+  <Card title="New records are added" icon="plus">
+    Athletes, drills, programs, and calendar entries that don't exist yet in your localStorage are created fresh.
+  </Card>
+  <Card title="Existing records are updated" icon="pen">
+    Records that already exist are updated with the values from the imported file. The import file takes precedence on conflicts.
+  </Card>
+</CardGroup>
+
+<Warning>
+  If you import a full-team export onto a device that already has a full-team export, any local changes made since the original export was taken will be overwritten for any conflicting records. If you've made updates on both devices since the last sync, you may lose some changes. When in doubt, export your current state before importing anything new.
+</Warning>
+
+---
+
+## Video Clips and Privacy
+
+Player Forged lets you upload short video clips to the drill and review sections for swing analysis and form feedback. These clips are handled entirely within your browser:
+
+- Clips are stored as local object URLs or in browser storage — they are **never uploaded to any server**.
+- No video data leaves your device under any circumstances.
+- Clips are not included in JSON exports (the export contains structured training data, not binary media files). If you need to move clips to another device, transfer the video files directly.
+
+<Tip>
+  Because clips don't transfer via export/import, set up video review on the device where the clips already live — or move the video files to the new device first, then re-attach them within the app.
+</Tip>
+
+---
+
+## Summary: Your Data, Your Device
+
+<CardGroup cols={2}>
+  <Card title="No server, no account" icon="server">
+    Zero data is transmitted anywhere. There's no backend, no login credentials, and no third party involved.
+  </Card>
+  <Card title="Export = your backup" icon="floppy-disk">
+    The JSON export is the only copy of your data outside the browser. Keep backups and share them intentionally.
+  </Card>
+  <Card title="Per-athlete files stay separate" icon="user-shield">
+    Importing one athlete's file never touches another athlete's records. Each person's data is isolated by roster identity.
+  </Card>
+  <Card title="Video never leaves the device" icon="video-slash">
+    Clips uploaded for review are processed and displayed locally. They are not included in exports or sent anywhere.
+  </Card>
+</CardGroup>

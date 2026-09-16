@@ -1,0 +1,129 @@
+---
+title: "Sharing Individual Athlete Files in Player Forged"
+sidebarTitle: "Athlete Files"
+description: "Export a file for each athlete, let them import it to start training, and receive progress files back — no accounts or cloud sync required."
+---
+
+The athlete file workflow is how coaches and players stay connected in Player Forged without needing accounts, logins, or an internet connection. You export a file for an athlete, they load it on their own device to get their assignments, and when they're done training they send a progress file back. You import that file and see exactly what they completed. The whole loop runs through standard file sharing — text, email, AirDrop, or whatever works for your team.
+
+## Step 1 — Export an athlete's file
+
+In the **Team** tab, each athlete in your roster has an **Export for [Name]** button next to their entry. Tapping it immediately downloads a file named after that athlete — for example, `marcus-training.json`.
+
+This file contains:
+
+- The athlete's name and position tags
+- All training assignments you've given them
+- Their current checklist state and completion history
+- Any notes attached to their assignments
+
+<Note>
+  Each athlete gets their own individual file. There's no combined "send to all" option — export each file separately and share them individually so athletes only see their own data.
+</Note>
+
+The exported file is named using the format `[athlete-name]-training.json`. If an athlete's name includes spaces, they're replaced with hyphens — so "Marcus Webb" becomes `marcus-webb-training.json`.
+
+## Step 2 — Share the file with your athlete
+
+Send the `.json` file to your athlete using any method that works for them:
+
+- **Text message or iMessage** — attach the file directly
+- **Email** — attach as a standard file attachment
+- **AirDrop** — works well if you're in the same location
+- **Google Drive / Dropbox / iCloud** — share a link if file attachments are blocked
+
+The athlete doesn't need a Player Forged account. They just need the file and the app open in their browser.
+
+<Tip>
+  If your athletes are younger or less tech-savvy, the quickest handoff is AirDrop or a group text at the start of practice. Walk through the import step together the first time so everyone knows the routine.
+</Tip>
+
+## Step 3 — Athlete imports the file
+
+Once the athlete has the file, they have two ways to load it depending on whether they've signed in yet.
+
+<Tabs>
+  <Tab title="At the sign-in screen (recommended)">
+    When the athlete opens Player Forged for the first time (or on a fresh device), the sign-in screen shows an **Import it** button. Tapping it opens the file picker.
+
+    <Steps>
+      <Step title="Tap Import it on the sign-in screen">
+        The option appears below the name entry field. It's the fastest path for athletes loading the app for the first time.
+      </Step>
+      <Step title="Select the file from the coach">
+        Navigate to wherever the athlete saved or received the file — Downloads, Files app, email attachment, etc.
+      </Step>
+      <Step title="Confirm the import">
+        Player Forged reads the file and automatically fills in the athlete's name. Their assignments appear immediately — no manual entry needed.
+      </Step>
+      <Step title="Start training">
+        The athlete is dropped straight into their training view with all their drills and checklists loaded and ready.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="After signing in manually">
+    If the athlete signed in by typing their name before they received their file, they can still import it later through the **data bar** at the bottom of their training view.
+
+    <Steps>
+      <Step title="Sign in with their name">
+        Athlete types their name and taps Sign In as normal.
+      </Step>
+      <Step title="Open the data bar">
+        Tap the data bar at the bottom of the training view to expand the options.
+      </Step>
+      <Step title="Tap Load a file from my coach">
+        Select the `.json` file shared by the coach.
+      </Step>
+      <Step title="Assignments load in">
+        The athlete's assignments, checklist history, and profile data merge into the current session.
+      </Step>
+    </Steps>
+
+    <Note>
+      If the athlete already has some completions from training before they imported the file, those completions are preserved. The import merges data — it doesn't reset anything.
+    </Note>
+  </Tab>
+</Tabs>
+
+## Step 4 — Athlete sends progress back to the coach
+
+After completing training sessions, the athlete exports their own progress file and sends it back to you.
+
+In their training view, the data bar shows a **Send my progress to coach** button. Tapping it downloads a file named `[athlete-name]-training.json` containing everything they've done — completed drills, checklist state, and timestamps.
+
+The athlete sends this file back to you the same way you sent theirs: text, email, AirDrop, or a shared drive.
+
+## Step 5 — Coach imports the progress file
+
+Back in the **Team** tab, tap **Import athlete files** and select the file the athlete sent you. Player Forged merges their updated data into their record.
+
+<Steps>
+  <Step title="Tap Import athlete files in the Team tab">
+    You can select multiple athletes' files in one pass if several players have sent you progress at the same time.
+  </Step>
+  <Step title="Select the athlete's progress file">
+    Navigate to the file on your device.
+  </Step>
+  <Step title="Open the athlete's assignment panel">
+    Scroll down to the athlete's entry in the roster and tap their name to expand their panel. You'll see their updated checklist history, completion counts, and any drills they've finished since the last sync.
+  </Step>
+</Steps>
+
+<Warning>
+  Importing one athlete's file never overwrites another athlete's data. Each file is matched to the athlete it belongs to and merged individually. The only import that replaces all data is a full team backup (`team-data.json`).
+</Warning>
+
+## File naming reference
+
+| File | Named | Contains |
+|---|---|---|
+| Individual athlete file | `[athlete-name]-training.json` | That athlete's profile, assignments, and completions |
+| Team backup | `team-data.json` | Entire team — all athletes, settings, branding, custom drills |
+
+<Accordion title="What if an athlete's name changed since I exported the file?">
+  Player Forged matches imported athlete files by name. If you change an athlete's name in the roster after exporting their file, importing the old file will create a new entry rather than merging into the updated name. To avoid duplicate entries, re-export the athlete's file after any name change and share the updated version.
+</Accordion>
+
+<Accordion title="Can an athlete's file be opened and read outside the app?">
+  Yes — `.json` files are plain text and can be opened in any text editor. The data isn't encrypted. If privacy matters for your organization, treat these files like any other student record and share them only through secure channels.
+</Accordion>

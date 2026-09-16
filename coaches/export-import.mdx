@@ -1,0 +1,99 @@
+---
+title: "Exporting and Importing Data in Player Forged"
+sidebarTitle: "Export & Import"
+description: "Back up your team, share athlete files, and restore data on any device using Player Forged's built-in export and import system."
+---
+
+Player Forged stores all of your data locally on the device you're using — there's no account login or cloud sync. The export and import system is how you move that data around: back it up before switching devices, share it with athletes, or pull in progress files your players send back to you. Once you understand the two export types and how importing works, keeping your team data safe becomes a quick habit.
+
+## Export types
+
+Player Forged offers two separate export options. Which one appears depends on your role.
+
+<Tabs>
+  <Tab title="Coach — Back up whole team">
+    The **Back up whole team** button appears in the Data section of the Team tab and is only available to coaches. It packages everything stored on your device into a single file:
+
+    - Full roster (all athlete names and positions)
+    - All training assignments
+    - Completion and checklist history for every athlete
+    - Calendar events
+    - Team branding settings (name, colors, logo)
+    - Any custom drills you've created
+
+    The exported file is named `team-data.json`. Save it somewhere safe — your phone's Files app, a cloud drive, or your laptop. When you need to restore your data or set up the app on a new device, this file contains everything.
+
+    <Tip>
+      Make a habit of exporting your team backup at the end of each week or after any major update, like finishing a training block or adding new athletes. It takes about two seconds and gives you a clean restore point.
+    </Tip>
+
+    <Warning>
+      A full team backup imported later will **replace all current app data** on that device. If you're importing on a device that already has a different season's data, make sure you export the current device's data first.
+    </Warning>
+  </Tab>
+  <Tab title="Athlete — Send my progress to coach">
+    The **Send my progress to coach** button appears in an athlete's data bar when they're signed in with the Player role. It exports only that individual athlete's data:
+
+    - Their profile (name, positions)
+    - Their current training assignments
+    - All drill completions and checklist state
+
+    The file is named `[athlete-name]-training.json` — for example, `marcus-training.json`. The athlete sends this file to you (via text, email, AirDrop, or any other method), and you import it in the Team tab to see their updated progress.
+
+    <Note>
+      An athlete's export file contains only their own data. It has no access to other athletes' information, your team settings, or your custom drills.
+    </Note>
+  </Tab>
+</Tabs>
+
+## Importing data
+
+<Tabs>
+  <Tab title="Coach — Import athlete files">
+    In the Team tab, tap the **Import athlete files** button. You can select multiple `.json` files at once — useful when several athletes have sent you their progress at the same time.
+
+    Player Forged processes each file individually:
+
+    - **Per-athlete files** are merged into that athlete's existing record. Importing one athlete's file never touches another athlete's data.
+    - **Full team backup files** (`team-data.json`) replace all data on the device.
+
+    <Steps>
+      <Step title="Open the Team tab">
+        Tap **Team** in the bottom navigation bar and scroll to the Data section.
+      </Step>
+      <Step title="Tap Import athlete files">
+        The file picker opens. Navigate to where your athlete sent their progress file.
+      </Step>
+      <Step title="Select one or more files">
+        You can select multiple athlete files in a single pass. Each file is processed in order.
+      </Step>
+      <Step title="Review the updated panel">
+        After import, open each athlete's assignment panel to see their refreshed checklist history and completion counts.
+      </Step>
+    </Steps>
+
+    <Note>
+      If you accidentally import a file twice, Player Forged merges the data rather than duplicating it — completed drills already marked done stay marked done.
+    </Note>
+  </Tab>
+  <Tab title="Athlete — Load a file from my coach">
+    When a coach exports an individual athlete file and shares it with that athlete, the athlete loads it using the **Load a file from my coach** button. This button appears in two places:
+
+    1. **On the sign-in screen** — tap **Import it** before signing in. The app reads the file, fills in the athlete's name automatically, and pre-loads all of their assignments so they're ready to train immediately.
+    2. **In the data bar after signing in** — athletes who signed in manually can still load a file from their coach at any time using the same button.
+
+    Either path produces the same result: the athlete's profile, assignments, and prior history are all in place without any manual setup.
+  </Tab>
+</Tabs>
+
+## localStorage and session-only mode
+
+Player Forged uses your browser's `localStorage` to save data between visits. On most devices this works automatically. In a small number of situations — private/incognito browsing mode, certain browser security settings, or storage quota limits — `localStorage` may be unavailable.
+
+When that happens, the app still runs normally for your current session, but **progress will not be saved when you close the tab or browser**. A banner appears at the top of the screen to let you know.
+
+<Warning>
+  If you see the storage unavailable warning, export your data before closing the app. Data saved only in memory is lost the moment the session ends. Switching out of private browsing mode or using a different browser usually resolves the issue.
+</Warning>
+
+If you're a coach working on a school or organization-managed device that blocks `localStorage`, the export/import workflow is your primary way to preserve data — export at the end of every session, import at the start of the next one.

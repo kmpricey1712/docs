@@ -1,0 +1,135 @@
+---
+title: "Navigating the Player Forged App Interface"
+sidebarTitle: "Navigation"
+description: "A complete tour of Player Forged's four main sections, the data bar, the Training As selector, and how the sign-in screen fits into the overall flow."
+---
+
+Player Forged is organized into four main sections accessible from the primary navigation bar. Which section you land on when you first enter the app depends on your role — Coaches go straight to **Team**, Athletes go straight to **Training**. From there, every section is one tap away. This page walks you through each area and explains the utility controls that live outside the main sections.
+
+## The Four Main Sections
+
+<CardGroup cols={2}>
+  <Card title="Training" icon="dumbbell">
+    Your personal workout hub. Assigned drills, daily checklists, completion tracking, and your training history all live here.
+  </Card>
+  <Card title="Practice Calendar" icon="calendar">
+    A day-by-day view of scheduled practices, rest days, and off-season blocks. Coaches get a full team planning view; athletes see their own schedule.
+  </Card>
+  <Card title="Team" icon="users">
+    Roster management, athlete profiles, assignment tools, and per-athlete export. Primarily used by Coaches but visible to all signed-in users.
+  </Card>
+  <Card title="Rest & Off-Season" icon="moon">
+    Guidance and tracking for recovery periods. Mark off-season blocks, log rest days, and access recovery-focused programming separate from in-season training.
+  </Card>
+</CardGroup>
+
+---
+
+### Training
+
+The **Training** tab is the day-to-day workhorse of Player Forged. If you're an Athlete, this is where you start every session.
+
+- **Assigned workouts** pushed by your coach appear here automatically after you import your training file.
+- Each workout card shows the drill list, target reps or duration, and any coaching notes attached to that session.
+- Tap a workout to expand it into a full checklist. Check off each item as you go.
+- Your completion history scrolls below the active assignment so you can see a running log of what you've finished.
+
+<Tip>
+  If you don't see any assigned workouts yet, your coach may not have exported and sent your training file. Ask them to share it from the Team tab, then import it — either at the sign-in screen or via the Import button in the data bar. See [Sign In](/getting-started/sign-in) for the import-at-login shortcut.
+</Tip>
+
+---
+
+### Practice Calendar
+
+The **Practice Calendar** gives you a monthly and weekly view of your program. Days are color-coded to distinguish active training days, scheduled rest, team practices, and off-season blocks.
+
+<Tabs>
+  <Tab title="Athlete view">
+    You see your personal schedule: which days have assigned workouts, which are marked as rest, and whether any team-wide practice sessions are scheduled. Tapping a day opens a summary of what's planned and lets you mark it complete.
+  </Tab>
+  <Tab title="Coach view">
+    The Coach view layers every athlete's schedule onto a single calendar. You can see at a glance who is scheduled for what on any given day, make bulk edits to the team schedule, and add or remove rest or off-season blocks for individual athletes or the entire roster.
+  </Tab>
+</Tabs>
+
+<Note>
+  Switching between the Athlete and Coach calendar views is automatic — it follows your current role. If you want to see the team-wide Coach view, sign in as Coach (or use Switch User). See [Roles](/getting-started/roles) for more.
+</Note>
+
+---
+
+### Team
+
+The **Team** tab is the organizational backbone of Player Forged. Coaches will spend most of their administrative time here.
+
+- **Roster list** — every athlete who has signed in on this device appears here. Tap any name to see their profile, assignment history, and completion stats.
+- **Add / remove athletes** — manually add an athlete by name before they sign in, or remove a departed player from the roster.
+- **Assign training** — select one athlete or the whole team, pick a program or build a custom one, and push it. The assignment shows up in the athlete's Training tab the next time they load the app on this device (or after they import a fresh training file).
+- **Per-athlete export** — tap the export icon next to any athlete's name to download a JSON file containing just their data. Send that file to the athlete so they can import it on their own device.
+
+<Warning>
+  The Team tab is visible to users signed in under either role, but assignment and roster-editing controls are only surfaced in the Coach role UI. If you're signed in as an Athlete and need to make roster changes, use Switch User to sign back in as Coach.
+</Warning>
+
+---
+
+### Rest & Off-Season
+
+The **Rest & Off-Season** section keeps recovery as intentional as active training.
+
+- Mark individual days or multi-week blocks as off-season directly from this tab or from the calendar.
+- Access recovery-specific programming: mobility routines, mental preparation exercises, and light conditioning drills that sit outside your normal in-season load.
+- Track sleep, soreness, and readiness notes so you have a full picture of your physical state heading into the next training block.
+
+<Tip>
+  Coaches can schedule off-season blocks for the whole team from this tab, pushing the same rest window to every athlete on the roster at once.
+</Tip>
+
+---
+
+## The Data Bar
+
+At the top of the app — above the main navigation — you'll find the **data bar**, a slim toolbar containing two buttons:
+
+<CardGroup cols={2}>
+  <Card title="Export" icon="arrow-up-from-bracket">
+    Downloads a JSON snapshot of all data currently in localStorage on this device. Use this to back up your work, move data to another device, or share training files with athletes or coaches.
+  </Card>
+  <Card title="Import" icon="arrow-down-to-bracket">
+    Loads a JSON file you've received or previously exported and merges (or replaces) the data into your current session. You can also import at the sign-in screen to load data before you even reach the main app.
+  </Card>
+</CardGroup>
+
+The data bar is always visible regardless of which section you're in, so you can export or import without navigating away from your current task. See [Data & Privacy](/getting-started/data-and-privacy) for a detailed explanation of how import and export work under the hood.
+
+---
+
+## The "Training As" Athlete Selector
+
+Inside the **Training** tab you'll notice a dropdown at the top of the page labeled **Training As**. This selector lets you browse the training data for any athlete on the roster without signing out.
+
+- **Athletes** see only their own name in the list.
+- **Coaches** see the full roster, making it easy to preview exactly what an athlete will see, check their checklist progress, or demo a new assignment.
+
+<Note>
+  The Training As selector is a read-and-browse tool for coaches. Completing checklist items while viewing another athlete's profile records the completion under that athlete's history — useful if a coach is logging reps on behalf of a player, but worth being deliberate about.
+</Note>
+
+---
+
+## The Sign-In Screen
+
+The sign-in screen is the first thing you see when you open Player Forged on a device where no session is active — or after you tap **Switch User**. It's covered in full on the [Sign In](/getting-started/sign-in) page, but here's how it fits into the overall navigation flow:
+
+<Steps>
+  <Step title="Sign-in screen on first load">
+    Before any data is in localStorage, you're presented with the sign-in screen. Choose your role, enter your name, and optionally import a training file. Completing sign-in drops you into the app at the default tab for your role.
+  </Step>
+  <Step title="Returning visits">
+    If the app detects an existing session in localStorage, it skips the sign-in screen and takes you directly into the app as the last active user. The name and role displayed in the header tell you who's currently signed in.
+  </Step>
+  <Step title="Switch User">
+    Tapping **Switch User** in the header clears the active session indicator and returns you to the sign-in screen. No data is deleted — you're simply changing who the app considers the active user.
+  </Step>
+</Steps>

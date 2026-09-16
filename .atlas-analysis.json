@@ -1,0 +1,137 @@
+{
+  "projectType": "saas",
+  "projectName": "Player Forged",
+  "projectDescription": "Player Forged is an MLB-inspired, at-home baseball training app that delivers position-specific drill programs for athletes of all skill levels, with built-in video review, team roster management, and a practice calendar to help coaches coordinate supplemental training.",
+  "theme": "almond",
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Getting Started",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "introduction",
+              "getting-started/sign-in",
+              "getting-started/roles"
+            ]
+          },
+          {
+            "group": "App Overview",
+            "pages": [
+              "getting-started/navigation",
+              "getting-started/data-and-privacy"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Training",
+        "groups": [
+          {
+            "group": "How Training Works",
+            "pages": [
+              "training/overview",
+              "training/skill-levels",
+              "training/phases-and-progression"
+            ]
+          },
+          {
+            "group": "Training Focuses",
+            "pages": [
+              "training/pitcher",
+              "training/catcher",
+              "training/infielder",
+              "training/outfielder",
+              "training/hitter",
+              "training/base-running",
+              "training/speed-and-conditioning"
+            ]
+          },
+          {
+            "group": "Tools",
+            "pages": [
+              "training/video-review",
+              "training/equipment",
+              "training/self-review-checklists",
+              "training/sticker-rewards"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "For Coaches",
+        "groups": [
+          {
+            "group": "Roster Management",
+            "pages": [
+              "coaches/roster",
+              "coaches/assigning-training",
+              "coaches/athlete-progress"
+            ]
+          },
+          {
+            "group": "Customization",
+            "pages": [
+              "coaches/custom-drills",
+              "coaches/team-branding",
+              "coaches/practice-calendar"
+            ]
+          },
+          {
+            "group": "Data & Files",
+            "pages": [
+              "coaches/export-import",
+              "coaches/athlete-files"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Recovery",
+        "groups": [
+          {
+            "group": "Rest & Off-Season",
+            "pages": [
+              "recovery/overview",
+              "recovery/rest-guidance",
+              "recovery/off-season-program"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Position-specific drill programs for Pitcher, Catcher, Infielder, Outfielder, Hitter, Base Running, and Speed & Conditioning",
+    "Four skill levels: Beginner (Ages 7–10), Developing (Ages 11–13), Intermediate (Ages 14–18), and Advanced (18+)",
+    "Phased training progression with clear 'move on when' milestones",
+    "Built-in video review tool with side-by-side comparison and slow-motion/frame-stepping controls",
+    "Self-review checklists that reset daily to encourage consistent practice habits",
+    "Sticker reward system that awards collectible stickers every 5 completed drills",
+    "Team roster management with per-athlete training assignments",
+    "Practice calendar with coach and player views to coordinate team vs. solo training",
+    "Custom drill builder for coaches to add their own content to any focus/level",
+    "Team branding (name, colors, logo) applied across the entire app",
+    "Export/import system for sharing training files between coaches and athletes",
+    "Equipment tracker with automatic bodyweight-friendly substitutions for missing gear",
+    "Age-specific rest and off-season program guidance",
+    "Fully offline — all data stays on device, nothing uploaded anywhere"
+  ],
+  "publicApiSurface": [
+    "Training focuses: pitcher, catcher, infielder, outfielder, hitter, baserunning, conditioning",
+    "Skill tiers: beginner, developing, intermediate, advanced",
+    "Phase/drill structure: name, meta (sets/reps), steps, checklist, equipment, diagram",
+    "Equipment types: tee, plyo_balls, machine, medicine_ball, resistance_band, ladder_cones, wall, weights",
+    "Export formats: per-athlete JSON file, full-team JSON backup",
+    "Import formats: athlete file (merges single athlete), team backup (replaces full dataset)",
+    "Team branding fields: name, primaryColor, accentColor, logo (base64 data URL)",
+    "Custom drills: track, tier, name, meta, steps, checklist",
+    "Calendar day types: none, team, solo, rest",
+    "Session roles: coach, athlete",
+    "Sticker designs: baseball, glove, bat, cap, plate, trophy, pennant, cleats, diamond, star"
+  ]
+}

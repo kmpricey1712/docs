@@ -1,0 +1,109 @@
+---
+title: "Reviewing Your Mechanics with the Video Review Tool"
+sidebarTitle: "Video Review"
+description: "Compare your swing or delivery side-by-side with a reference clip. Upload a file or record live, then step through frame by frame at any speed."
+---
+
+The Video Review tool gives you a split-screen workspace where you can study your mechanics in detail. Load your own clip on the left, optionally load a coach demo or model swing on the right, and play both together in perfect sync — or scrub through frame by frame to catch exactly what your body is doing at every point in the motion. Video Review is available for both the **Pitcher** and **Hitter** training focuses.
+
+## The Two-Panel Layout
+
+The workspace is divided into two panels side by side. The **left panel** is always your clip — the footage you either upload from your device or record live. The **right panel** is optional and holds a reference clip, such as a coach demonstration or a model swing you want to compare against.
+
+Both panels share a single set of playback controls at the bottom of the screen. When you press Play, both clips play simultaneously from the same relative timestamp so you can directly compare positions. If you have only one clip loaded, the controls still work the same way — the empty panel simply stays blank.
+
+## Loading a Clip
+
+### Uploading a Video File
+
+<Steps>
+  <Step title="Open the Video Review tool">
+    Navigate to your Pitcher or Hitter training focus and tap the **Video Review** button. The two-panel workspace will open with both panels empty.
+  </Step>
+  <Step title="Choose a panel">
+    Tap the **Upload** button inside the left panel to load your own clip. To load a reference clip, tap the **Upload** button inside the right panel.
+  </Step>
+  <Step title="Select your file">
+    Your device's file picker will open. Choose any video file from your library. Most common formats — MP4, MOV, WebM, AVI — are accepted.
+  </Step>
+  <Step title="Wait for it to load">
+    The clip will appear in the panel and auto-pause at the first frame. It never leaves your device — nothing is uploaded to any server.
+  </Step>
+</Steps>
+
+<Note>
+  **Your clips stay on this device only.** No video data is transmitted or stored anywhere outside your browser. Everything happens locally.
+</Note>
+
+### Recording Live with Your Camera
+
+You can record directly from your device's camera — useful when a partner is filming your reps in real time and you want to review them immediately.
+
+<Steps>
+  <Step title="Tap Record">
+    Inside either panel, tap the **Record** button (camera icon) instead of Upload.
+  </Step>
+  <Step title="Grant camera permission">
+    Your browser will ask for permission to access your camera. Tap **Allow**. The live camera feed will appear in the panel.
+  </Step>
+  <Step title="Hit Record and go">
+    Tap the red **Record** button to start capturing. When your rep is done, tap **Stop**. The recorded clip immediately loads into the panel, ready for playback.
+  </Step>
+</Steps>
+
+<Warning>
+  **Camera access requires a secure context.** Browsers only allow camera access when the page is served over **https://** or from **localhost**. If you are opening the app directly from a saved file on your computer (a `file://` URL), the browser will block camera access by design — this is a browser security rule that Player Forged cannot override. The fix is to access the app through its normal web address instead.
+</Warning>
+
+<Accordion title="Camera permission was denied — how do I fix it?">
+  If you tapped Deny by accident, or your browser blocked the camera automatically, you can reset the permission:
+
+  - **Chrome / Edge:** Click the lock icon in the address bar → **Site settings** → set Camera to **Allow**, then refresh the page.
+  - **Firefox:** Click the lock icon → **Connection secure** → **More information** → **Permissions** → remove the blocked camera entry, then refresh.
+  - **Safari (iOS/macOS):** Go to **Settings → Safari → Camera** and set it to **Allow** for this site, then reload.
+  - **In all cases:** Make sure you are on an `https://` URL, not a `file://` path — camera access will never work on `file://` no matter what permissions you set.
+</Accordion>
+
+## Playback Controls
+
+The controls below the panels apply to both clips at once.
+
+| Control | What it does |
+|---|---|
+| **Play Both** | Starts synchronized playback in both panels from the current position |
+| **Pause** | Pauses both clips at the current frame |
+| **Restart Both** | Jumps both clips back to the very beginning and pauses |
+| **Step Forward** | Advances both clips exactly one frame (1/30 second) |
+| **Step Back** | Rewinds both clips exactly one frame (1/30 second) |
+
+Stepping through frames is the most useful tool for breaking down your mechanics. Hold down the step button to move through a sequence quickly, or tap once to inspect a single moment.
+
+## Speed Controls
+
+Three playback speeds are available. Select the speed before pressing Play, or change it mid-playback — both clips will immediately adjust.
+
+- **0.25×** — Quarter speed. Best for checking hand path, hip rotation, and release point in fine detail.
+- **0.5×** — Half speed. Good for reading overall sequencing and timing without losing the feel of the motion.
+- **1×** — Full speed. Use this first to see the motion as it actually happens before slowing it down.
+
+<Tip>
+  Start at 1× to get a feel for the overall movement, then drop to 0.25× and step frame by frame through the part of the motion you want to fix. Comparing positions at the same frame in both panels makes mechanical differences much easier to spot.
+</Tip>
+
+## Clearing a Clip
+
+To remove a clip from either panel, tap the **✕** (clear) button in the corner of that panel. The panel returns to its empty state. The other panel is unaffected. You can then upload or record a new clip in its place.
+
+---
+
+## Known Limitations
+
+<Accordion title="iPhone .MOV / HEVC files won't play in my browser">
+  iPhones record in HEVC (H.265) encoded inside a `.mov` container by default. Most browsers on non-Apple platforms cannot decode HEVC natively, so the clip will not play.
+
+  **Three ways to fix this:**
+
+  1. **Share as MP4.** In your iPhone Photos app, tap Share on the video and choose **Save Video** — some paths will re-encode to a compatible format. Alternatively, AirDrop to a Mac and export from Photos as MP4.
+  2. **Set iPhone to Most Compatible mode.** Go to **Settings → Camera → Formats** and select **Most Compatible**. New recordings will be saved as H.264 MP4, which plays everywhere.
+  3. **Use Safari.** Safari on iPhone and macOS has full HEVC support. If you need to review an HEVC clip without re-encoding, open the app in Safari instead.
+</Accordion>

@@ -1,0 +1,67 @@
+---
+title: "How to Sign In to Player Forged"
+sidebarTitle: "Sign In"
+description: "Learn how to sign in as a Coach or Athlete, link to an existing roster entry, import a training file, and switch between accounts — no password required."
+---
+
+Player Forged doesn't use accounts or passwords. Instead, you pick a role and enter your name — that's it. If your name is already on the team roster, the app links you to your existing profile automatically. First-time users are added to the roster on the spot. Everything stays local to your device.
+
+## Sign-In Steps
+
+<Steps>
+  <Step title="Open Player Forged">
+    Navigate to the app in your browser. On first load — or any time no active session is detected — you'll land on the sign-in screen. You'll see a role selector and a name field.
+  </Step>
+
+  <Step title="Choose your role">
+    Select either **Coach** or **Athlete**. This choice controls which tab you land on and which features are visible to you. Don't stress — you can always switch later using the **Switch User** link. See [Roles](/getting-started/roles) for a full breakdown of what each role can do.
+  </Step>
+
+  <Step title="Enter your name">
+    Type your first and last name exactly as it appears (or should appear) on the roster. The app performs a case-insensitive match against existing roster entries.
+
+    - **Name found on roster** — you're linked to that athlete or coach profile instantly. No extra steps needed.
+    - **Name not found** — a new entry is created for you and added to the roster automatically.
+
+    <Tip>
+      If you're an athlete whose coach has already built out the roster, make sure your name matches what the coach entered. Even a small spelling difference will create a duplicate entry instead of linking to your profile.
+    </Tip>
+  </Step>
+
+  <Step title="Import a training file (optional)">
+    If your coach has sent you a training file (a `.json` export from their device), you can import it **right at sign-in** to pre-load your assigned workouts, drills, and schedule. Click **Import Training File**, select the file from your device, and the data merges into your local session before you even reach the main app.
+
+    <Note>
+      Importing at sign-in is the fastest way to get started — it skips every manual-entry step. Your coach can export your individual athlete file from the Team tab and send it to you directly. See [Data & Privacy](/getting-started/data-and-privacy) to learn exactly what the import process does with your existing data.
+    </Note>
+  </Step>
+
+  <Step title="Enter the app">
+    Tap or click **Sign In**. You'll land on the default tab for your role — **Training** for Athletes, **Team** for Coaches. The top of every screen shows your name and role so you always know who you're signed in as.
+  </Step>
+</Steps>
+
+## If Your Name Is Already on the Roster
+
+When you type a name that matches an existing roster entry, Player Forged links you to that profile silently — you'll see your historical assignments, completed workouts, and any notes your coach has added. There's no confirmation prompt; the match is automatic.
+
+<Warning>
+  If two people on the same team share a name, both will be linked to the same roster entry. Ask your coach to differentiate the names (e.g. adding a jersey number or middle initial) before you sign in.
+</Warning>
+
+## Switching Accounts
+
+You don't need to close the browser or clear storage to change who's signed in. Look for the **Switch User** link in the app header or settings area. Clicking it returns you to the sign-in screen so a different team member can enter their name and role.
+
+<CardGroup cols={2}>
+  <Card title="Switching is instant" icon="arrow-right-arrow-left">
+    No log-out delay, no confirmation. You're back at the sign-in screen in one click.
+  </Card>
+  <Card title="Data stays put" icon="database">
+    Switching users doesn't erase anything. All roster entries and training data remain in localStorage exactly as they were.
+  </Card>
+</CardGroup>
+
+<Tip>
+  Shared devices (like a tablet in the dugout) work great with Player Forged. Each player taps **Switch User**, enters their name, and picks up right where they left off.
+</Tip>
